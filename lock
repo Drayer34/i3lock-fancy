@@ -14,7 +14,7 @@ font=$(convert -list font | awk "{ a[NR] = \$2 } /family: $(fc-match sans -f "%{
 image=$(mktemp --suffix=.png)
 shot=(import -window root)
 desktop=""
-i3lock_cmd=(i3lock -i "$image")
+i3lock_cmd=(i3lock -f -i "$image")
 shot_custom=false
 
 options="Options:
